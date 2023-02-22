@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TITLE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">	
+	<style>
+		body {
+			width: 288px;
+			font-family: 'Open Sans', sans-serif;
+		}
+		.container {
+			width: 268px;
+			margin: auto;
+			border-bottom: 2px dotted #000;
+			
+		}
+		p {
+			font-size: 12px;
+		}
+		h1 {
+			font-size: 17px;
+			font-weight: 600;
+		}
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			font-size: 10px;
+		}
+		table th {
+			background: #E5E5E5;
+			text-align: left;
+			padding: 5px;
+		}
+		table td {
+			background: #FFF;
+			text-align: left;
+			padding: 5px;
+		}
+		.total td {
+			text-align: right!important;
+			font-weight: 600;
+			font-size: 12px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div style="text-align: center;">
+			<img src="https://bite-list.s3.amazonaws.com/SmQRldp9nsScreenshot2022-02-22at10.jpg" style="width: 80px; margin-top: 20px;"/>
+			<p>
+				Hotline: 01841-512871
+				<br>
+				Website: www.biteclubbd.com
+			</p>
+		</div>
+	</div>
+	<div class="container">
+		<div style="text-align: center;">
+			<h1>Order# {{order.order_identifier}}</h1>
+		</div>
+	</div>
+	<div class="container">
+		<table>
+			<tr>
+				<th>
+					Sl.
+				</th>
+				<th>
+					Items
+				</th>
+				<th>
+					Qty
+				</th>
+				<th>
+					Price
+				</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>{{item}}</td>
+				<td>{{item_quantity}}</td>
+				<td>{{item_price}} TK</td>
+			</tr>
+		</table>
+	</div>
+	<div class="container">
+		<table class="total">
+			
+			<tr>
+				<td>Sub total</td>
+				<td>{{item_price}} TK </td>
+			</tr>
+			<tr>
+				<td>Vat (10%)</td>
+				<td>0 TK</td>
+			</tr>
+			<tr>
+				<td>Total</td>
+				<td>{{item_price}} TK</td>
+			</tr>
+		</table>
+	</div>
+	<div class="container">
+		<div style="text-align: center;">
+			<p>Payment Method:<br>
+				<b>
+					Cash on delivery
+				</b>
+			</p>
+		</div>
+	</div>
+</body>
+</html>
